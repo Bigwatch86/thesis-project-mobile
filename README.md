@@ -28,7 +28,7 @@
 <img title="Gradle" src="images/logo/Gradle.svg" height="48" width="48">
 <img title="JUnit5" src="images/logo/JUnit5.svg" height="48" width="48">
 <img title="Selenide" src="images/logo/Selenide.svg" height="48" width="48">
-<img title="Android Studio" src="images/logo/androidstudio.jpg" height="48" width="48"> 
+<img title="Android Studio" src="images/logo/androidstudio.png" height="48" width="48"> 
 <img title="Appium Server GUI" src="images/logo/appium.png" height="48" width="48">
 <img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48">
 <img title="Telegram" src="images/logo/Telegram.svg" height="48" width="48">
