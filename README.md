@@ -46,17 +46,17 @@
 <p><i>Если список устройств пуст, то необходимо создать устройство и запустить его: </i>
 </br>
 </br>
-<img title="Запуск Android Studio" src="images/screenshots/AndroidStudio_2.jpg">
+<img title="Запуск эмулятора" src="images/screenshots/AndroidStudio_2.jpg">
 
 <p><i>Запущенный эмулятор выглядит следующим образом: </i>
 </br>
 </br>
-<img title="Запуск Android Studio" src="images/screenshots/AndroidStudio_3.jpg">
+<img title="Эмулятор реального устройства" src="images/screenshots/AndroidStudio_3.jpg">
 
 <p><i>Далее необходимо запустить <b>Appium Server</b>: </i>
 </br>
 </br>
-<img title="Запуск Android Studio" src="images/screenshots/Appium_1.jpg">
+<img title="Запуск Appium" src="images/screenshots/Appium_1.jpg">
 
 <h3>:large_blue_diamond:	 Процесс запуска тестов происходит так:</h3>
 
@@ -94,7 +94,7 @@ java  \
 <h4>:small_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h4>
 
 <p align="center">
-<img title="Allure Dashboards" src="images/screenshots/AllureReport_3.jpg">
+<img title="Allure Graphs" src="images/screenshots/AllureReport_3.jpg">
 </p>
 
 
