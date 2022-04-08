@@ -53,33 +53,19 @@
 </br>
 <img title="Запуск Android Studio" src="images/screenshots/AndroidStudio_3.jpg">
 
-<p><i>Следующим шагом необходимо запустить <b>Appium Server</b>: </i>
+<p><i>Далее необходимо запустить <b>Appium Server</b>: </i>
 </br>
 </br>
 <img title="Запуск Android Studio" src="images/screenshots/Appium_1.jpg">
 
-<h3>:large_blue_diamond:	 Процесс запуска тестов происходит следующим образом:</h3>
+<h3>:large_blue_diamond:	 Процесс запуска тестов происходит так:</h3>
 
 <p><i>В терминале Intelij_IDEA ппрописываем следующие команды, после которых запускаются тесты: </i>
 
 ```
 gradle clean test
 ```
-
-<img title="Запуск сборки с параметрами" src="images/screenshots/Jenkins_1.jpg">
-</p>
-
-<p><i>Выбираем необходимые параметры запуска и нажимаем <b>"Собрать"</b>: </i>
-</br>
-</br>
-<img title="Выбор параметров" src="images/screenshots/Jenkins_2.jpg">
-</p>
-
-<p><i>Результаты работы сборки можно посмотреть, нажав на значок "Allure TestOps"</b>: </i>
-</br>
-</br>
-<img title="Просмотр результатов" src="images/screenshots/Jenkins_3.jpg">
-</p>
+<p><i>Для отправки отчета в Телеграм, ппрописываем следующие команды: </i>
 
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
 
