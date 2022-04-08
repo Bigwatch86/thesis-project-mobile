@@ -43,7 +43,7 @@
 </br>
 <img title="Запуск Android Studio" src="images/screenshots/AndroidStudio_1.jpg">
 
-<p><i>Если список устройств пуст, то необзодимо создать устройство и запустить его: </i>
+<p><i>Если список устройств пуст, то необходимо создать устройство и запустить его: </i>
 </br>
 </br>
 <img title="Запуск Android Studio" src="images/screenshots/AndroidStudio_2.jpg">
