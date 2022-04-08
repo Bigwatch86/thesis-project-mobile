@@ -67,30 +67,34 @@ gradle clean test
 ```
 <p><i>Для отправки отчета в Телеграм, ппрописываем следующие команды: </i>
 
+```
+java  \
+"-DprojectName=Local run" \
+"-Denv=Testing" \
+"-DreportLink=No link" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=./notifications/telegram_config_local.json" \
+-jar ./notifications/allure-notifications-3.1.2.jar
+```
+
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
 
-<h4>:small_orange_diamond:	 Страница со списком всех пройденных проверок:</h4>
+<h4>:small_orange_diamond:	 Страница с результатами пройденных проверок:</h4>
 
 <p align="center">
-<img title="Test results" src="images/screenshots/Allure_TestOps_1.jpg">
+<img title="Test results" src="images/screenshots/AllureReport_1.jpg">
 </p>
 
-<h4>:small_orange_diamond:	 Страница со всеми запусками:</h4>
+<h4>:small_orange_diamond:	 Страница с результатами пройденных проверок, если есть оишбки:</h4>
 
 <p align="center">
-<img title="Allure Launches" src="images/screenshots/Allure_TestOps_2.jpg">
-</p>
-
-<h4>:small_orange_diamond:	 Дефект, описанный в результате запуска тестов:</h4>
-
-<p align="center">
-<img title="Allure Defects" src="images/screenshots/Allure_TestOps_3.jpg">
+<img title="Test results with bug" src="images/screenshots/AllureReport_2.jpg">
 </p>
 
 <h4>:small_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h4>
 
 <p align="center">
-<img title="Allure Dashboards" src="images/screenshots/Allure_TestOps_4.jpg">
+<img title="Allure Dashboards" src="images/screenshots/AllureReport_3.jpg">
 </p>
 
 
