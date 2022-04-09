@@ -13,11 +13,9 @@ public class WikipediaTests extends TestBase{
     @Test
     @DisplayName("Проверка загрузки стартовых страниц")
     void searchTest() {
-        step("Загрузка первой страницы", () -> {
+        step("Загрузка первой страницы", () ->
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView")).
-                    shouldHave(text("The Free Encyclopedia …in over 300 languages"));
-        });
-
+                    shouldHave(text("The Free Encyclopedia …in over 300 languages")));
         step("Загрузка второй страницы", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_forward_button")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView")).
