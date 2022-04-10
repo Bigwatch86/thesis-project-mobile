@@ -77,7 +77,7 @@ java  \
 -jar ./notifications/allure-notifications-3.1.2.jar
 ```
 
-<h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
+<h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure Report</h2>
 
 <h4>:small_orange_diamond:	 Страница с результатами пройденных проверок:</h4>
 
