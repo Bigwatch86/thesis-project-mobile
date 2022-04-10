@@ -1,6 +1,4 @@
-<h1>Проект по тестированию главной страницы интернет-магазина "Ситилинк".</h1>
-
-<a target="_blank" href="https://www.citilink.ru/">Ссылка на сайт магазина</a>
+<h1>Проект по тестированию мобильного приложения Wikipedia.</h1>
 
 <h2>:bookmark_tabs: Содержание</h2>
 
@@ -8,23 +6,17 @@
 
 :eight_spoked_asterisk:	 Стек технологий
 
-:eight_spoked_asterisk:	 Запуск тестов в Jenkins
+:eight_spoked_asterisk:	 Подготовка окружения и запуск тестов
 
-:eight_spoked_asterisk:	 Отчет о результатах прохождения тестов в Allure TestOps
+:eight_spoked_asterisk:	 Отчет о результатах прохождения тестов в Allure Report
 
 :eight_spoked_asterisk:	 Уведомления в Telegram с использованием бота
 
-:eight_spoked_asterisk:	 Пример запуска теста в Selenoid
-
 <h2>:eyes:	 Реализованные проверки</h2>
 
-:black_medium_square: Проверка загрузки заголовка и его содержимого
+:black_medium_square: Проверка загрузки страниц ознакомления
 
-:black_medium_square: Проверка загрузки нижнего колонтитула
-
-:black_medium_square: Проверка наличия каталога товаров
-
-:black_medium_square: Проверка работы поиска в каталоге товаров
+:black_medium_square: Проверка загрузки главной страницы приложения
 
 <h2>:books:	 Стек технологий</h2>
 
@@ -36,86 +28,79 @@
 <img title="Gradle" src="images/logo/Gradle.svg" height="48" width="48">
 <img title="JUnit5" src="images/logo/JUnit5.svg" height="48" width="48">
 <img title="Selenide" src="images/logo/Selenide.svg" height="48" width="48">
-<img title="Selenoid" src="images/logo/Selenoid.svg" height="48" width="48">
-<img title="Telegram" src="images/logo/Telegram.svg" height="48" width="48">
-<img title="Jenkins" src="images/logo/Jenkins.svg" height="48" width="48"> 
+<img title="Android Studio" src="images/logo/androidstudio.png" height="48" width="48"> 
+<img title="Appium Server GUI" src="images/logo/appium.png" height="48" width="48">
 <img title="Allure TestOps" src="images/logo/Allure_TestOps.png" height="48" width="48">
-<img title="Jira" src="images/logo/Jira.png" height="48" width="48"> 
+<img title="Telegram" src="images/logo/Telegram.svg" height="48" width="48">
 </p>
 
 
-<h2>:arrow_forward:	 Запуск тестов в Jenkins</h2>
-<p>Для запуска тестов используется инструмент CI/CD под названием <b>Jenkins</b></p>
+<h2>:arrow_forward:	 Подготовка окружения и запуск тестов</h2>
+<p>Для запуска тестов используется реальное устройство или эмулятор реального устройства, запущенный с помощью <b>Android Studio</b></p>
 
-<a target="_blank" href="https://jenkins.autotests.cloud/job/010-Bigwatch-thesis-project-UI/">Ссылка на задачу для запуска тестов</a>
+<p><i>Чтобы запустиль эмулятор необходимо запустить Android Studio и выбрать <b>Virtual Device Manager</b>: </i>
+</br>
+</br>
+<img title="Запуск Android Studio" src="images/screenshots/AndroidStudio_1.jpg">
 
-<p><i>Параметры сборки выбираются при запуске задачи:<b></i>
+<p><i>Если список устройств пуст, то необходимо создать устройство и запустить его: </i>
 </br>
 </br>
+<img title="Запуск эмулятора" src="images/screenshots/AndroidStudio_2.jpg">
 
-<p><code>BROWSER</code> – браузер, в котором будут выполняться тесты.</p>
-<p><code>VERSION</code> – версия браузера, в которой будут выполняться тесты.</p>
-<p><code>COMMENT</code> – комментарий для сообщения в Телеграм.</p>
-<p><code>ENVIRONMENT</code> - среда, на которой прогоняются автотесты.</p>
+<p><i>Запущенный эмулятор выглядит следующим образом: </i>
+</br>
+</br>
+<img title="Эмулятор реального устройства" src="images/screenshots/AndroidStudio_3.jpg">
 
-<h3>:large_blue_diamond:	 Процесс запуска происходит следующим образом:</h3>
+<p><i>Далее необходимо запустить <b>Appium Server</b>: </i>
+</br>
+</br>
+<img title="Запуск Appium" src="images/screenshots/Appium_1.jpg">
 
-<p><i>На странице сборки выбираем <b>"Собрать с параметрами"</b>: </i>
-</br>
-</br>
-<img title="Запуск сборки с параметрами" src="images/screenshots/Jenkins_1.jpg">
-</p>
+<h3>:large_blue_diamond:	 Процесс запуска тестов происходит так:</h3>
 
-<p><i>Выбираем необходимые параметры запуска и нажимаем <b>"Собрать"</b>: </i>
-</br>
-</br>
-<img title="Выбор параметров" src="images/screenshots/Jenkins_2.jpg">
-</p>
+<p><i>В терминале Intelij_IDEA прописываем следующие команды, после которых запускаются тесты: </i>
 
-<p><i>Результаты работы сборки можно посмотреть, нажав на значок "Allure TestOps"</b>: </i>
-</br>
-</br>
-<img title="Просмотр результатов" src="images/screenshots/Jenkins_3.jpg">
-</p>
+```
+gradle clean test
+```
+<p><i>Для отправки отчета в Телеграм, прописываем следующие команды: </i>
+
+```
+java  \
+"-DprojectName=Local run" \
+"-Denv=Testing" \
+"-DreportLink=No link" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=./notifications/telegram_config_local.json" \
+-jar ./notifications/allure-notifications-3.1.2.jar
+```
 
 <h2>:bar_chart:	 Отчет о результатах прохождения тестов в Allure TestOps</h2>
 
-<h4>:small_orange_diamond:	 Страница со списком всех пройденных проверок:</h4>
+<h4>:small_orange_diamond:	 Страница с результатами пройденных проверок:</h4>
 
 <p align="center">
-<img title="Test results" src="images/screenshots/Allure_TestOps_1.jpg">
+<img title="Test results" src="images/screenshots/AllureReport_1.jpg">
 </p>
 
-<h4>:small_orange_diamond:	 Страница со всеми запусками:</h4>
+<h4>:small_orange_diamond:	 Страница с результатами пройденных проверок, если есть оишбки:</h4>
 
 <p align="center">
-<img title="Allure Launches" src="images/screenshots/Allure_TestOps_2.jpg">
-</p>
-
-<h4>:small_orange_diamond:	 Дефект, описанный в результате запуска тестов:</h4>
-
-<p align="center">
-<img title="Allure Defects" src="images/screenshots/Allure_TestOps_3.jpg">
+<img title="Test results with bug" src="images/screenshots/AllureReport_2.jpg">
 </p>
 
 <h4>:small_orange_diamond:	 Страница с общими результатами тестирования в графическом виде:</h4>
 
 <p align="center">
-<img title="Allure Dashboards" src="images/screenshots/Allure_TestOps_4.jpg">
+<img title="Allure Graphs" src="images/screenshots/AllureReport_3.jpg">
 </p>
 
 
 <h2>:mailbox_with_mail:	 Уведомления в Telegram с использованием бота</h2>
-<p><i>После окончания сборки в Телеграм отправляется уведомление со ссылкой на отчёт. </i>
+<p><i>После окончания работы скрипта в Телеграм отправляется уведомление с результатами. </i>
 </br>
 </br>
 <img title="Telegram notification" src="images/screenshots/Telegram_message.jpg">
-</p>
-
-
-<h2>:cinema:	 Пример запуска теста в Selenoid</h2>
-<p><i>К каждому тесту в отчете прилагается видео: </i>
-</br>
-</br>
-<img title="Selenoid" src="images/screenshots/Selenoid.gif">
 </p>
