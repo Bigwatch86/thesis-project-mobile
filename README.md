@@ -85,7 +85,7 @@ java  \
 <img title="Test results" src="images/screenshots/AllureReport_1.jpg">
 </p>
 
-<h4>:small_orange_diamond:	 Страница с результатами пройденных проверок, если есть оишбки:</h4>
+<h4>:small_orange_diamond:	 Страница с результатами пройденных проверок, если есть ошибки:</h4>
 
 <p align="center">
 <img title="Test results with bug" src="images/screenshots/AllureReport_2.jpg">
