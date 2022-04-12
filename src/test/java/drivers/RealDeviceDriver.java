@@ -35,13 +35,13 @@ public class RealDeviceDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName(config.platformName());
-        options.setDeviceName(config.DeviceName());
-        options.setPlatformVersion(config.PlatformVersion());
+        options.setDeviceName(config.deviceName());
+        options.setPlatformVersion(config.platformVersion());
         options.setApp(app.getAbsolutePath());
-        options.setLocale(config.Locale());
-        options.setLanguage(config.Language());
+        options.setLocale(config.locale());
+        options.setLanguage(config.language());
         options.setAppPackage(config.appPackage());
-        options.setAppActivity(config.AppActivity());
+        options.setAppActivity(config.appActivity());
 
         try {
             return new AndroidDriver(new URL("http://localhost:4723/wd/hub"), options);
