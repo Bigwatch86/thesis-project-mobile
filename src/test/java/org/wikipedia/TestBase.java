@@ -26,7 +26,6 @@ public class TestBase {
 
     @BeforeEach
     public void startDriver() {
-
         open();
     }
 

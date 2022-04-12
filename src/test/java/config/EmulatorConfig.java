@@ -5,10 +5,10 @@ import org.aeonbits.owner.Config;
 @Config.Sources("classpath:config/emulator.properties")
 public interface EmulatorConfig extends Config {
     String platformName();
-    String DeviceName();
-    String PlatformVersion();
-    String Locale();
-    String Language();
+    String deviceName();
+    String platformVersion();
+    String locale();
+    String language();
     String appPackage();
-    String AppActivity();
+    String appActivity();
 }
